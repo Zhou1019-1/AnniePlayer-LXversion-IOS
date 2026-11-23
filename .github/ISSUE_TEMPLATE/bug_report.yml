@@ -1,0 +1,55 @@
+name: 缺陷报告
+description: 报告可复现的 iOS 缺陷；安全问题请先阅读 SECURITY.md。
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请勿填写密码、令牌、私钥、证书或真实用户数据；安全漏洞不要公开提交。
+  - type: textarea
+    id: summary
+    attributes:
+      label: 问题概述
+      description: 简要说明发生了什么。
+      placeholder: 例如：在特定系统版本启动后界面空白。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 按顺序提供可复现步骤。
+      placeholder: |
+        1. 打开应用
+        2. 执行……
+        3. 观察到……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境信息
+      description: 提供应用版本或 commit、iOS 版本、设备型号及安装来源。
+      placeholder: 应用版本/commit：\niOS：\n设备：\n安装来源：
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志与补充信息
+      description: 仅粘贴已脱敏的相关日志；大二进制请提供合规的附件或链接，不要提交秘密。
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前检查
+      options:
+        - label: 我已移除秘密、证书、隐私数据，并确认这不是需要私有披露的安全漏洞。
+          required: true
