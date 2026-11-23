@@ -1,0 +1,34 @@
+# macOS / Xcode 用户状态
+.DS_Store
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# 构建与派生产物
+build/
+DerivedData/
+.build/
+.swiftpm/
+*.app/
+*.ipa
+*.xcarchive/
+*.dSYM/
+*.dSYM.zip
+
+# 常见依赖与 Fastlane 输出
+Pods/
+Carthage/Build/
+fastlane/test_output/
+fastlane/report.xml
+fastlane/Preview.html
+
+# 签名材料与本地环境（不得进入 Git 或通过 QQ 传输）
+*.p12
+*.mobileprovision
+*.key
+*.pem
+.env
+.env.*
+!.env.example
+
+# 大二进制不得提交；构建交付使用 Actions Artifact 或 Release 资产
